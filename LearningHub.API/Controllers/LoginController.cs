@@ -25,7 +25,7 @@ namespace LearningHub.API.Controllers
         {
             return _loginService.CreateLogin(login);
         }
-        [Route("update/{id}")]
+        [Route("update")]
         [HttpPut]
         public bool UpdateLogin(Apilogin login)
         {
@@ -42,6 +42,20 @@ namespace LearningHub.API.Controllers
         public Apilogin GetLoginById(int id)
         {
             return _loginService.GetLoginById(id);
+        }
+        [Route("Logins")]
+        [HttpPost]
+        public IActionResult Login([FromBody] Apilogin apilogin)
+        {
+            var token = _loginService.Login(apilogin);
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                return Ok(token);
+            }
         }
     }
 }

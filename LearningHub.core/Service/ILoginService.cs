@@ -14,5 +14,6 @@ namespace LearningHub.core.Service
         public bool UpdateLogin(Apilogin login);
         public bool DeleteLogin(int id);
         public Apilogin GetLoginById(int id);
+        public string Login(Apilogin apilogin); // string datatype bacause he not return all information of ApiLogin object
     }
 }

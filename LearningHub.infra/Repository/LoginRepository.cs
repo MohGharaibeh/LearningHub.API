@@ -65,5 +65,15 @@ namespace LearningHub.infra.Repository
                 p, commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
         }
+
+        public Apilogin Login(Apilogin apilogin)
+        {
+            var p = new DynamicParameters();
+            p.Add("usrname", apilogin.Loginusername, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("pasword", apilogin.Loginpassword, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            var result = _dbConnection.Connection.Query<Apilogin>("API_Login_Package.Authentications",
+                p, commandType: CommandType.StoredProcedure);
+            return result.SingleOrDefault();
+        }
     }
 }

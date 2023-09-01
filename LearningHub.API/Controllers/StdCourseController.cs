@@ -38,7 +38,7 @@ namespace LearningHub.API.Controllers
         {
             return _service.DeleteStdCourse(id);
         }
-        [Route("Update/{id}")]
+        [Route("Update")]
         [HttpPut]
         public bool UpdateStdCourse(Apistdcourse apiStdcourse)
         {

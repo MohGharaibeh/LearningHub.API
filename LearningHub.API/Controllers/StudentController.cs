@@ -20,7 +20,7 @@ namespace LearningHub.API.Controllers
         {
             return _studentService.CreateStudent(apiStudent);
         }
-        [Route("Update/{id}")]
+        [Route("Update")]
         [HttpPut]
         public bool UpdateStudent(Apistudent apiStudent)
         {

@@ -21,7 +21,7 @@ namespace LearningHub.API.Controllers
         {
             return _courseService.CreateCourse(apiCourse);
         }
-        [Route("Update/{id}")]
+        [Route("Update")]
         [HttpPut]
         public bool UpdateCourse(Apicourse apiCourse)
         {

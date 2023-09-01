@@ -10,7 +10,6 @@ namespace LearningHub.core.Data
         public string? Loginpassword { get; set; }
         public decimal? Roleid { get; set; }
         public decimal? Studentid { get; set; }
-
         public virtual Apirole? Role { get; set; }
         public virtual Apistudent? Student { get; set; }
     }

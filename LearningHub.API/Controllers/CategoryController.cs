@@ -25,13 +25,13 @@ namespace LearningHub.API.Controllers
         {
             return _categoryService.CreateCategory(apiCategory);
         }
-        [Route("UpdateCategory /{id}")]
+        [Route("UpdateCategory")]
         [HttpPut]
         public bool UpdateCategory(Apicategory apiCategory)
         {
             return _categoryService.UpdateCategory(apiCategory);
         }
-        [Route("DeleteCategory /{id}")]
+        [Route("DeleteCategory/{id}")]
         [HttpDelete]
         public bool DeleteCategory(int id)
         {

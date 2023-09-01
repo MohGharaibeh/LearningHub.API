@@ -14,5 +14,6 @@ namespace LearningHub.core.Repository
         public bool UpdateLogin(Apilogin login);
         public bool DeleteLogin(int id);
         public Apilogin GetLoginById(int id);
+        public Apilogin Login(Apilogin apilogin);
     }
 }
